@@ -1,17 +1,18 @@
 module.exports = {
-  output: 'export', // For static export
+  // Remove the 'export' setting to enable dynamic routing and SSR
+  // output: 'export',
   images: {
-    unoptimized: true, // Disable image optimization for GitHub Pages
+    unoptimized: true, // Optionally keep this if image optimization isn't required
   },
-  basePath: '/soundcrate', // Replace with your actual repo name
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
-        fs: false, // Handle 'fs' module on the client-side
+        fs: false,
       };
     }
     return config;
   },
 };
+
 
 
