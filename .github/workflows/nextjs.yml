@@ -79,8 +79,7 @@ jobs:
 
       # Build your Next.js project
       - name: Build with Next.js
-        working-directory: soundcrate
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: npx next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
