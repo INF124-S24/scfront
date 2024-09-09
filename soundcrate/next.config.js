@@ -8,3 +8,11 @@ module.exports = {
     return config;
   },
 };
+
+const nextConfig = {
+  basePath: "/soundcrate",
+  output: "export",
+  reactStrictMode: true,
+};
+
+module.exports = nextConfig;
