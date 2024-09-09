@@ -79,6 +79,7 @@ jobs:
 
       # Build your Next.js project
       - name: Build with Next.js
+        working-directory: soundcrate
         run: npx next build
 
       - name: Upload artifact
